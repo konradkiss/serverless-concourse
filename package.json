@@ -1,0 +1,29 @@
+{
+  "name": "lightfold",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Distributed serverless AWS based game server framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konradkiss/lightfold.git"
+  },
+  "keywords": [
+    "aws",
+    "game",
+    "server",
+    "realtime",
+    "networked",
+    "distributed",
+    "serverless"
+  ],
+  "author": "Konrad Kiss <konrad@bitgap.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/konradkiss/lightfold/issues"
+  },
+  "homepage": "https://github.com/konradkiss/lightfold#readme"
+}
