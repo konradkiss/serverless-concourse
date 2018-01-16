@@ -5,6 +5,12 @@
   "description": "Distributed serverless AWS based game server framework.",
   "main": "index.js",
   "scripts": {
+    "postinstall": "docker pull lambci/lambda; sls dynamodb install;",
+    "dynamo:start": "sls dynamodb start -p 8000 &",
+    "dynamo:migrate": "sls dynamodb migrate; true",
+    "dynamo:stop": "kill -9 $(ps -A | grep \"\\s/usr/bin/java.*DynamoDBLocal\" | awk '{print $1;}'); true",
+    "offline:start": "sls offline start -r us-east-1 --noTimeout &",
+    "offline:stop": "kill -9 $(ps -A | grep \"\\snode.*sls\\soffline\\sstart\" | awk '{print $1;}'); npm run dynamo:stop; true",
     "test": "true"
   },
   "repository": {
@@ -25,5 +31,26 @@
   "bugs": {
     "url": "https://github.com/konradkiss/lightfold/issues"
   },
-  "homepage": "https://github.com/konradkiss/lightfold#readme"
+  "homepage": "https://github.com/konradkiss/lightfold#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.15.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^22.1.1",
+    "serverless": "^1.25.0",
+    "serverless-dynamodb-local": "^0.2.27",
+    "serverless-offline": "^3.16.0",
+    "serverless-offline-scheduler": "^0.3.3",
+    "serverless-plugin-select": "^2.0.0-rc.1",
+    "serverless-plugin-typescript": "^1.1.5",
+    "serverless-stack-output": "^0.2.3",
+    "serverless-webpack": "^4.2.0",
+    "source-map-support": "^0.5.0",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "serverless-dynamodb-client": "0.0.2"
+  }
 }
