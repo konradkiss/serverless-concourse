@@ -17,10 +17,10 @@ provider:
   stage: dev
   region: us-east-1
   profile: konradkiss
-  environment: ${file(./serverless/${opt:stage, self:provider.stage}/environment.yml)}
-  iamRoleStatements: ${file(./serverless/${opt:stage, self:provider.stage}/iam-role-statements.yml)}
+  environment: ${file(./config/${opt:stage, self:provider.stage}/environment.yml)}
+  iamRoleStatements: ${file(./config/${opt:stage, self:provider.stage}/iam-role-statements.yml)}
 functions: ${file(routes.${opt:stage, self:provider.stage}.yml)}
-resources: ${file(./serverless/${opt:stage, self:provider.stage}/resources.yml)}
+resources: ${file(./config/${opt:stage, self:provider.stage}/resources.yml)}
 
 package:
   individually: true
@@ -30,5 +30,5 @@ custom:
     port: 3000
   webpack: ../webpack.${opt:stage, self:provider.stage}.config.js
   output:
-    handler: ./serverless/${opt:stage, self:provider.stage}/cf-out.handler
-    file: ./.serverless/stack.${opt:stage, self:provider.stage}.json
+    handler: ./config/${opt:stage, self:provider.stage}/cf-out.handler
+    file: ./.config/stack.${opt:stage, self:provider.stage}.json
