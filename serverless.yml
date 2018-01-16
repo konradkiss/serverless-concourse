@@ -1,4 +1,4 @@
-service: lightfold
+service: serverless-concourse
 
 # frameworkVersion: "=X.X.X"
 

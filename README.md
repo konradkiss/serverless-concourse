@@ -1,3 +1,3 @@
-# lightfold
+# serverless-concourse
 
-Distributed serverless AWS based game server framework.
+Serverless API framework (AWS Lambda, DynamoDB) that makes development and iteration faster.

@@ -1,8 +1,8 @@
 {
-  "name": "lightfold",
+  "name": "serverless-concourse",
   "version": "1.0.0",
   "private": true,
-  "description": "Distributed serverless AWS based game server framework.",
+  "description": "Serverless API framework (AWS Lambda, DynamoDB) that makes development and iteration faster.",
   "main": "index.js",
   "scripts": {
     "postinstall": "docker pull lambci/lambda; sls dynamodb install;",
@@ -15,23 +15,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/konradkiss/lightfold.git"
+    "url": "git+https://github.com/konradkiss/serverless-concourse.git"
   },
   "keywords": [
     "aws",
-    "game",
-    "server",
-    "realtime",
-    "networked",
-    "distributed",
     "serverless"
   ],
   "author": "Konrad Kiss <konrad@bitgap.com>",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/konradkiss/lightfold/issues"
+    "url": "https://github.com/konradkiss/serverless-concourse/issues"
   },
-  "homepage": "https://github.com/konradkiss/lightfold#readme",
+  "homepage": "https://github.com/konradkiss/serverless-concourse#readme",
   "devDependencies": {
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
