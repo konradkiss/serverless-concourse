@@ -1,7 +1,5 @@
 const slsw = require('serverless-webpack')
 const path = require('path')
-const glob = require('glob')
-const fs = require('fs')
 
 module.exports = {
   entry: slsw.lib.entries,
@@ -21,7 +19,8 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
-        presets: [['env', { target: { node: '6.10' }, useBuiltIns: true, modules: false, loose: true }], 'stage-0'],
+        presets: [['env', { target: { node: 'current' }, useBuiltIns: true, modules: false, loose: true }], 'stage-0'],
+        plugins: [ 'transform-async-to-generator' ]
       },
     }],
   },

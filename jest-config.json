@@ -1,0 +1,17 @@
+{
+	"collectCoverageFrom": [
+		"<rootDir>/functions/**/*"
+	],
+	"coveragePathIgnorePatterns": [
+		"<rootDir>/node_modules/",
+		"<rootDir>/config"
+	],
+	"coverageReporters": ["json", "lcov", "text", "html"],
+	"notify": true,
+	"testEnvironment": "node",
+	"testPathIgnorePatterns": [
+		"/config/",
+		"/node_modules/"
+	],
+	"testRegex": ".+\\.test.js"
+}
