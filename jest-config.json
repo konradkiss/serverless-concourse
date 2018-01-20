@@ -13,5 +13,6 @@
 		"/config/",
 		"/node_modules/"
 	],
-	"testRegex": ".+\\.test.js"
+  "testRegex": ".+\\.test.js",
+  "verbose": true
 }

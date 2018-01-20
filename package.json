@@ -11,7 +11,7 @@
     "dynamo:stop": "kill -9 $(ps -A | grep \"\\s/usr/bin/java.*DynamoDBLocal\" | awk '{print $1;}'); true",
     "offline:start": "sls offline start -r us-east-1 --noTimeout &",
     "offline:stop": "kill -9 $(ps -A | grep \"\\snode.*sls\\soffline\\sstart\" | awk '{print $1;}'); npm run dynamo:stop; true",
-    "test": "true"
+    "test": "./node_modules/.bin/jest"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "generator-serverless-concourse": "git+https://github.com/konradkiss/generator-serverless-concourse.git#master",
     "jest": "^22.1.1",
     "lambda-wrapper": "^0.2.2",
+    "read-yaml": "^1.1.0",
     "regenerator-runtime": "^0.11.1",
     "serverless": "^1.25.0",
     "serverless-dynamodb-local": "^0.2.27",
