@@ -1,7 +1,6 @@
 {
   "name": "serverless-concourse",
   "version": "0.1.0",
-  "private": true,
   "description": "Serverless API framework (AWS Lambda, DynamoDB) that makes development and iteration faster.",
   "main": "index.js",
   "scripts": {
@@ -37,7 +36,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.15.0",
     "eslint-plugin-import": "^2.8.0",
-    "generator-serverless-concourse": "git+https://github.com/konradkiss/generator-serverless-concourse.git#master",
+    "generator-serverless-concourse": "^0.1.1",
     "jest": "^22.1.1",
     "lambda-wrapper": "^0.2.2",
     "read-yaml": "^1.1.0",
