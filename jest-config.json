@@ -4,14 +4,16 @@
 	],
 	"coveragePathIgnorePatterns": [
 		"<rootDir>/node_modules/",
-		"<rootDir>/config"
+		"<rootDir>/.config",
+		"<rootDir>/__tests__"
 	],
 	"coverageReporters": ["json", "lcov", "text", "html"],
 	"notify": true,
 	"testEnvironment": "node",
 	"testPathIgnorePatterns": [
-		"/config/",
-		"/node_modules/"
+		"/.config/",
+    "/node_modules/",
+    "/functions"
 	],
   "testRegex": ".+\\.test.js",
   "verbose": true

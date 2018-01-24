@@ -17,10 +17,10 @@ provider:
   stage: dev
   region: us-east-1
   profile: konradkiss
-  environment: ${file(./config/${opt:stage, self:provider.stage}/environment.yml)}
-  iamRoleStatements: ${file(./config/${opt:stage, self:provider.stage}/iam-role-statements.yml)}
+  environment: ${file(./.config/${opt:stage, self:provider.stage}/environment.yml)}
+  iamRoleStatements: ${file(./.config/${opt:stage, self:provider.stage}/iam-role-statements.yml)}
 functions: ${file(routes.yml)}
-resources: ${file(./config/${opt:stage, self:provider.stage}/resources.yml)}
+resources: ${file(./.config/${opt:stage, self:provider.stage}/resources.yml)}
 
 package:
   individually: true
