@@ -8,9 +8,11 @@
     "dynamo:start": "sls dynamodb start -p 8000 &",
     "dynamo:migrate": "sls dynamodb migrate; true",
     "dynamo:stop": "kill -9 $(ps -A | grep \"\\s/usr/bin/java.*DynamoDBLocal\" | awk '{print $1;}'); true",
-    "offline:start": "sls offline start -r us-east-1 --noTimeout &",
+    "offline:start": "sls offline start -r ${AWS_REGION} --noTimeout &",
     "offline:stop": "kill -9 $(ps -A | grep \"\\snode.*sls\\soffline\\sstart\" | awk '{print $1;}'); npm run dynamo:stop; true",
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest",
+    "aws:deploy": "sls deploy -v",
+    "aws:remove": "sls remove"
   },
   "repository": {
     "type": "git",

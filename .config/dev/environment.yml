@@ -1,9 +1,2 @@
 
-RECAPTCHAV2_SITE_KEY: ${file(./.env.${opt:stage, self:provider.stage}.yml):RECAPTCHAV2_SITE_KEY}
-RECAPTCHAV2_SECRET_KEY: ${file(./.env.${opt:stage, self:provider.stage}.yml):RECAPTCHAV2_SECRET_KEY}
-
-TWILIO_ACCOUNT_SID: ${file(./.env.${opt:stage, self:provider.stage}.yml):TWILIO_ACCOUNT_SID}
-TWILIO_AUTH_TOKEN: ${file(./.env.${opt:stage, self:provider.stage}.yml):TWILIO_AUTH_TOKEN}
-TWILIO_PHONE_NUMBER: ${file(./.env.${opt:stage, self:provider.stage}.yml):TWILIO_PHONE_NUMBER}
-
 DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}

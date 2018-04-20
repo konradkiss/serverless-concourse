@@ -15,8 +15,8 @@ provider:
   name: aws
   runtime: nodejs6.10
   stage: dev
-  region: us-east-1
-  profile: konradkiss
+  region: ${env:AWS_REGION}
+  profile: ${env:AWS_PROFILE}
   environment: ${file(./.config/${opt:stage, self:provider.stage}/environment.yml)}
   iamRoleStatements: ${file(./.config/${opt:stage, self:provider.stage}/iam-role-statements.yml)}
 functions: ${file(routes.yml)}
