@@ -1,6 +1,6 @@
 {
   "name": "serverless-concourse",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Serverless API framework (AWS Lambda, DynamoDB) that makes development and iteration faster.",
   "main": "index.js",
   "scripts": {
