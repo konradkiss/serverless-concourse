@@ -1,3 +1,3 @@
 v1_healthchecks_getHealthcheck:
     handler: functions/v1/healthchecks/getHealthcheck.getHealthcheck
-    events: [{http: {method: GET, path: healthcheck}}]
+    events: [{http: {method: GET, path: v1/healthcheck}}]
