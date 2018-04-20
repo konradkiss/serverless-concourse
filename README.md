@@ -9,9 +9,9 @@ Serverless API framework (AWS Lambda, DynamoDB) that makes development and itera
 ### Setup
 
 - Make sure your environment has the following dependencies installed:
-  - (Docker)[https://docs.docker.com/install/]
-  - (Java JDK)[http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html]
-  - (NVM)[https://github.com/creationix/nvm]
+  - [Docker](https://docs.docker.com/install/)
+  - [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+  - [NVM](https://github.com/creationix/nvm)
 - Run `nvm install <.nvmrc && nvm use <.nvmrc` to make sure you're using the appropriate version of node for this repository.
 - Run `npm install` to install module dependencies.
 
