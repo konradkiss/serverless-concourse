@@ -24,5 +24,5 @@ Serverless API framework (AWS Lambda, DynamoDB) that makes development and itera
 
 ### Deploy to AWS
 
-1. Run `STAGE=dev AWS_PROFILE=default AWS_REGION=eu-west-1 npm run aws:deploy` to deploy all endpoints for the default stage to AWS. Run `STAGE=dev AWS_PROFILE=default AWS_REGION=eu-west-1 npm run aws:remove` to remove it.
+- Run `STAGE=dev AWS_PROFILE=default AWS_REGION=eu-west-1 npm run aws:deploy` to deploy all endpoints for the default stage to AWS. Run `STAGE=dev AWS_PROFILE=default AWS_REGION=eu-west-1 npm run aws:remove` to remove it.
 
